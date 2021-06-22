@@ -1,8 +1,9 @@
 ---
-
-- hosts: all
+- hosts: localhost
   tasks:
-  - name: Creating an empty file
-    file:
-      path: "/tech-breakfix-cantboot-001"
-      state: touch
+    - name: 'Execute changes'
+      shell: /root/tech-breakfix-cantboot-001 break
+      args:
+        executable: /bin/bash
+...
+
